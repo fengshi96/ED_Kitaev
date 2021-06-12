@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="BitHamiltonian"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Barn/Lab/BitHamiltonian/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Barn/Lab/BitHamiltonian/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Barn/Lab/BitHamiltonian/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Barn/Lab/BitHamiltonian/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Barn/Lab/BitHamiltonian/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Barn/Lab/BitHamiltonian/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Barn/Lab/BitHamiltonian/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Barn/Lab/BitHamiltonian/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Barn/Lab/BitHamiltonian/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Barn/Lab/BitHamiltonian/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Barn/Lab/BitHamiltonian/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Barn/Lab/BitHamiltonian/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Barn/Lab/BitHamiltonian/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Barn/Lab/BitHamiltonian/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Barn/Lab/BitHamiltonian/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BitHamiltonian">
+				<Option output="/Barn/Lab/BitHamiltonian/cmake-build-debug/BitHamiltonian" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Barn/Lab/BitHamiltonian/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shifeng/Codes/0.Codes/intel/oneapi/mkl/latest/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Barn/Lab/BitHamiltonian/cmake-build-debug/Makefile&quot;  VERBOSE=1 BitHamiltonian"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Barn/Lab/BitHamiltonian/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Barn/Lab/BitHamiltonian/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Barn/Lab/BitHamiltonian/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BitHamiltonian/fast">
+				<Option output="/Barn/Lab/BitHamiltonian/cmake-build-debug/BitHamiltonian" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Barn/Lab/BitHamiltonian/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shifeng/Codes/0.Codes/intel/oneapi/mkl/latest/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Barn/Lab/BitHamiltonian/cmake-build-debug/Makefile&quot;  VERBOSE=1 BitHamiltonian/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Barn/Lab/BitHamiltonian/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Barn/Lab/BitHamiltonian/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Barn/Lab/BitHamiltonian/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Barn/Lab/BitHamiltonian/main.cpp">
+			<Option target="BitHamiltonian"/>
+		</Unit>
+		<Unit filename="/Barn/Lab/BitHamiltonian/src/BLAS.h">
+			<Option target="BitHamiltonian"/>
+		</Unit>
+		<Unit filename="/Barn/Lab/BitHamiltonian/src/Hamiltonian.cpp">
+			<Option target="BitHamiltonian"/>
+		</Unit>
+		<Unit filename="/Barn/Lab/BitHamiltonian/src/Hamiltonian.h">
+			<Option target="BitHamiltonian"/>
+		</Unit>
+		<Unit filename="/Barn/Lab/BitHamiltonian/src/LAPACK.h">
+			<Option target="BitHamiltonian"/>
+		</Unit>
+		<Unit filename="/Barn/Lab/BitHamiltonian/src/Lattice.cpp">
+			<Option target="BitHamiltonian"/>
+		</Unit>
+		<Unit filename="/Barn/Lab/BitHamiltonian/src/Lattice.h">
+			<Option target="BitHamiltonian"/>
+		</Unit>
+		<Unit filename="/Barn/Lab/BitHamiltonian/src/Matrix.cpp">
+			<Option target="BitHamiltonian"/>
+		</Unit>
+		<Unit filename="/Barn/Lab/BitHamiltonian/src/Matrix.h">
+			<Option target="BitHamiltonian"/>
+		</Unit>
+		<Unit filename="/Barn/Lab/BitHamiltonian/src/Memusage.cpp">
+			<Option target="BitHamiltonian"/>
+		</Unit>
+		<Unit filename="/Barn/Lab/BitHamiltonian/src/Memusage.h">
+			<Option target="BitHamiltonian"/>
+		</Unit>
+		<Unit filename="/Barn/Lab/BitHamiltonian/src/Parser.cpp">
+			<Option target="BitHamiltonian"/>
+		</Unit>
+		<Unit filename="/Barn/Lab/BitHamiltonian/src/Parser.h">
+			<Option target="BitHamiltonian"/>
+		</Unit>
+		<Unit filename="/Barn/Lab/BitHamiltonian/src/QBasis.cpp">
+			<Option target="BitHamiltonian"/>
+		</Unit>
+		<Unit filename="/Barn/Lab/BitHamiltonian/src/QBasis.h">
+			<Option target="BitHamiltonian"/>
+		</Unit>
+		<Unit filename="/Barn/Lab/BitHamiltonian/src/Vector.cpp">
+			<Option target="BitHamiltonian"/>
+		</Unit>
+		<Unit filename="/Barn/Lab/BitHamiltonian/src/Vector.h">
+			<Option target="BitHamiltonian"/>
+		</Unit>
+		<Unit filename="/Barn/Lab/BitHamiltonian/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,3 @@
+/Barn/Lab/BitHamiltonian/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Barn/Lab/BitHamiltonian/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Barn/Lab/BitHamiltonian/cmake-build-debug/CMakeFiles/BitHamiltonian.dir
