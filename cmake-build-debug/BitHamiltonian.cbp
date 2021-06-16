@@ -99,6 +99,9 @@
 		<Unit filename="/Barn/Lab/BitHamiltonian/src/LAPACK.h">
 			<Option target="BitHamiltonian"/>
 		</Unit>
+		<Unit filename="/Barn/Lab/BitHamiltonian/src/Lanczos.h">
+			<Option target="BitHamiltonian"/>
+		</Unit>
 		<Unit filename="/Barn/Lab/BitHamiltonian/src/Lattice.cpp">
 			<Option target="BitHamiltonian"/>
 		</Unit>

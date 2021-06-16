@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.17)
+cmake_minimum_required(VERSION 3.16)
 project(BitHamiltonian)
 
 set(CMAKE_CXX_STANDARD 20)
@@ -20,7 +20,7 @@ set(MKL -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_rt -lmkl_core -liomp5 -lpthrea
 
 set(SOURCE_FILES main.cpp src/Matrix.h src/Matrix.cpp src/Vector.h src/Vector.cpp src/LAPACK.h src/BLAS.h
         src/Parser.h src/QBasis.h src/QBasis.cpp src/Parser.cpp src/Hamiltonian.cpp
-        src/Hamiltonian.h src/Lattice.cpp src/Lattice.h src/Memusage.h src/Memusage.cpp)
+        src/Hamiltonian.h src/Lattice.cpp src/Lattice.h src/Memusage.h src/Memusage.cpp src/Lanczos.h)
 
 # executable and linking
 add_executable(BitHamiltonian ${SOURCE_FILES})

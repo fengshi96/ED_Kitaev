@@ -13,4 +13,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Barn/Lab/BitHamiltonian/cmake-build-debug
+-- Build files have been written to: /Barn/Lab/BitHamiltonian

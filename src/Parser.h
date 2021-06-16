@@ -60,6 +60,7 @@ struct SParameters : Parameters {
         std::cout << "____________________________________" << std::endl;
 
         Model = matchstring2(inputfile,"Model");
+        Solver = matchstring2(inputfile,"Solver");
         Kxx = matchstring(inputfile,"Kxx");
         Kyy = matchstring(inputfile,"Kyy");
         Kzz = matchstring(inputfile,"Kzz");

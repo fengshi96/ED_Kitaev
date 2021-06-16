@@ -84,6 +84,9 @@ public:
         data_.resize(newrow*newcol);
     }
 
+    inline size_t size() {
+        return data_.size();
+    }
     inline int rows() { return nrow;}
     inline int cols() { return ncol;}
 
@@ -137,6 +140,8 @@ public:
 
     Matrix<T> prod(Matrix<T>& B, char option = 'g');
     std::vector<T> prod(std::vector<T>& X, char option = 'g');
+
+    T trace();
 
 private:
     int nrow, ncol;
@@ -311,6 +316,16 @@ template<class T>
 void Matrix<T>::ajoint(){
     this->conj();
     this->transpose();
+}
+
+template<class T>
+T Matrix<T>::trace() {
+    assert(IsSquare());
+    T trace = 0.0;
+    for (int i = 0; i < nrow; ++i){
+        trace += data_[i+ i * nrow];
+    }
+    return trace;
 }
 
 template<class T>
