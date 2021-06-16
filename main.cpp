@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
         diag(Hamil.HamMatrix, Evals, 'V');
         std::cout << "--> Beg of Eigen Values " << std::endl;
         Evals.println();
-        std::cout << "--> Beg of Eigen Values" << std::endl;
+        std::cout << "--> End of Eigen Values" << std::endl;
         Psi = Hamil.HamMatrix.colspace(0);  // ground state
     } else if (Parameters.Solver == "Lanczos") {
 
