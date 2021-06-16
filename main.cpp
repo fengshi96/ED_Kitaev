@@ -82,7 +82,7 @@ int main(int argc, char *argv[]) {
     {
         for (int j=0; j < S1RDM.size(); j++)
         {
-            outfile << S1RDM(i,j);
+            outfile << S1RDM(i,j) << " ";
         }
         outfile << "\n";
     }
