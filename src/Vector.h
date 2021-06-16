@@ -447,8 +447,10 @@ dcomplex cdot(std::vector<dcomplex>& X, std::vector<dcomplex>& Y);
 fcomplex cdot(std::vector<fcomplex>& X, std::vector<fcomplex>& Y);
 
 
+// Below doesn't work on unity!----------------
 /*----------------End Declaration-----------------*/
 // = Free functions: Vector rescale
+/*
 template<class T>
 std::vector<T> operator * (const std::vector<T>& X , const auto a) {
     T sa = static_cast<T>(a);  // from c++17
@@ -504,5 +506,5 @@ void operator -= (const std::vector<T>& X, const std::vector<T> &Y) {
         X[i] = X[i] - Y[i];
     }
 }
-
+*/
 #endif //CPPKIT_VECTOR_H
