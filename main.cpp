@@ -13,12 +13,12 @@ using std::endl;
 typedef std::size_t SizeType;
 double pi=acos(-1.0);
 
-int main() {
-    string inputfile = "/Barn/Lab/BitHamiltonian/input.inp";
+int main(int argc, char *argv[]) {
+    if (argc<2) {
+        throw std::invalid_argument("USE:: executable inputfile");
+    }
+    std::string inputfile = argv[1];
 
-
-    //std::cout.unsetf ( std::ios::floatfield );
-    //std::cout.precision(6);
 
     // Read from the inputfile
     SParameters Parameters(inputfile);
@@ -34,66 +34,81 @@ int main() {
     // Build non-zero Diagonal and Off Diagonal part of Hamiltonian
     Hamiltonian Hamil(Parameters, Lat, Basis);
 
-    // Exact diagonalization
+    // Diagonalization
+    Vector<dcomplex> Psi;
     Vector<double> Evals;
-    diag(Hamil.HamMatrix, Evals, 'V'); Evals.println();
-    Vector<dcomplex> Psi(Hamil.HamMatrix.colspace(0));  // ground state
+    if (Parameters.Solver == "ED") {
+        diag(Hamil.HamMatrix, Evals, 'V');
+        std::cout << "Beg of Eigen Value: " << std::endl;
+        Evals.println();
+        std::cout << "End of Eigen Value" << std::endl;
+        Psi = Hamil.HamMatrix.colspace(0);  // ground state
+    } else if (Parameters.Solver == "Lanczos") {
+
+    } else {
+      throw std::runtime_error ("Solver not recognized!");
+    }
 
 
-
-    // Entanglement !!!! This doesn't work! I'm going out and have fun!
+    // Entanglement
     // -- Define a cut;
-//    std::vector<SizeType> S1sites = {0, 1, 2};
-//    std::vector<SizeType>S2sites = {3, 4, 5, 6, 7};
-//    Matrix<SizeType> ABCutLabels;
-//    Basis.ABSplit(S1sites, S2sites);
-//;
-//    //cout << ABCutLabels << endl;
+    std::vector<SizeType> S1sites = {0, 1, 2};
+    std::vector<SizeType> S2sites = {3, 4, 5, 6, 7};  // kept system
+
+    Matrix<SizeType> ABCutLabels = Basis.ABSplit(S1sites, S2sites);
+
 //    cout << endl << " --> Print ABCutLabels" << endl;
 //    ABCutLabels.print();
 //
 //
-//    int S1Hil = pow(2,S1sites.size());
-//    int S2Hil = pow(2,S2sites.size());
+    int S1Hil = pow(2,S1sites.size());
+    int S2Hil = pow(2,S2sites.size());
 //
-//    Matrix<dcomplex> S1RDM(S1Hil,S1Hil);
-//    for (int i=0; i<S1Hil; i++) {
-//        for (int j=0; j<S1Hil; j++) {
-//            for (int k=0; k<S2Hil; k++) {
-//                SizeType ikL = ABCutLabels(i,k);
-//                SizeType jkL = ABCutLabels(j,k);
-//                S1RDM(i,j) += conj(Psi[ikL])*Psi[jkL];
-//            }
-//        }
-//    }
-//    cout << " --> Print reduced density matrix into S1RDM.dat\n";
-//    S1RDM.print();
+    Matrix<dcomplex> S1RDM(S1Hil,S1Hil);
+    for (int i=0; i<S1Hil; i++) {
+        for (int j=0; j<S1Hil; j++) {
+            for (int k=0; k<S2Hil; k++) {
+                SizeType ikL = ABCutLabels(i,k);
+                SizeType jkL = ABCutLabels(j,k);
+                S1RDM(i,j) += conj(Psi[ikL])*Psi[jkL];
+            }
+        }
+    }
+    cout << "--> Printing RDM to S1RDM.dat\n";
+    std::ofstream outfile;
+    string outfilename2 = "S1RDM.dat";
+    outfile.open(outfilename2);
+    for (int i=0; i < S1RDM.size(); i++)
+    {
+        for (int j=0; j < S1RDM.size(); j++)
+        {
+            outfile << S1RDM(i,j);
+        }
+        outfile << "\n";
+    }
+    outfile.close();
 
 
-    //cout << S1RDM << endl << endl;
-//    string outfilename2 = "S1RDM.dat";
-//    outfile.open(outfilename2);
-//    outfile << S1RDM;
-//    outfile.close();
+     cout << "--> Trace of the reduced density matrix = " << S1RDM.trace() << endl;
 
-    // cout << " --> Trace of the reduced density matrix " << S1RDM.trace() << endl;
+     Vector<double> entSpec;
+     diag(S1RDM, entSpec, 'V');
+     cout << endl << "--> Beg of eigen values of RDM " << endl;
+     entSpec.println();
+     cout << "--> End of eigen values of RDM " << endl;
+
+     double entropy=0.0;
+     for(double i : entSpec) {
+         if(i > 0) {
+             entropy += -i*log(i);
+         }
+     }
+     cout << "--> vN Entropy = " << entropy << endl << endl;
 
 
 
+     cout << "--------THE END--------" << endl;
 
-//    SParameters Sp(filename);
-//    std::cout << Sp.type_id << std::endl;
-
-//    Lattice lattice(Sp);
-
-//    fstream readFile(filename);
-//    if (!readFile.is_open())
-//        perror("error while opening file");
-//
-//    string line;
-//    while (getline(readFile, line)) {
-//        cout << "Success!" << endl;
-//    }
 
     return 0;
 }
